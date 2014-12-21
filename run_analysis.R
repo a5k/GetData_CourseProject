@@ -30,24 +30,26 @@ feature_labels <- read.table(file.path(path, feature_labels),
 activity_labels <- read.table(file.path(path, activity_labels), 
                               header = FALSE)
 
+##replace all "-" with "_" and () with "_" 
+feature_labels$V2 <- gsub("-","_", feature_labels$V2)
+feature_labels$V2 <- gsub("[[:punct:]]","_", feature_labels$V2)
+##make labels more readable by replacing the first character
+## with time and freq as appropriate
+feature_labels$V2 <- gsub("^t", "Time_", feature_labels$V2)
+feature_labels$V2 <- gsub("^f", "Freq_", feature_labels$V2)
+
 ## find all columns in feature labels that contain a mean
-col_mean <- grep("mean", feature_labels$V2)
+col_mean <- grep("mean_", feature_labels$V2)
 
 ## find all columns in feature labels containing a stdev
-col_std <- grep("std", feature_labels$V2)
-
+col_std <- grep("std_", feature_labels$V2)
 ##create the columns vector that contains features of interest
 cols <- sort(c(col_mean, col_std))
 col_names <- feature_labels[cols,]
 col_names <- as.character(col_names$V2)
 ##add names for activityid and subjectid
 col_names <- c(col_names, "ActivityID", "SubjectID")
-##replace all "-" with "_" and () with "_"
-## I was unable to remove "()" from the feature name in R
-## so did a find/replace in Notepad++ to replace all "()" 
-##with "_". the "()" interferes with sqldf operations. 
-col_names <- gsub("-","_", col_names)
-#col_names <- gsub("()", "_", col_names)
+
 ##create a column list vector of nulls
 col_list <- rep("NULL", nrow(feature_labels))
 ## replace NULL with NA for the columns we need
