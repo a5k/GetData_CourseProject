@@ -3,23 +3,24 @@
  [1] "SubjectID" - ID of the subject                     
  [2] "ActivityID" - name of the activity subject was measured for. 
  Columns 3 through 81 in the results are the means of all the observations of the mean and standard deviation of the following features by subject id and activity
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+*tBodyAcc-XYZ
+*tGravityAcc-XYZ
+*tBodyAccJerk-XYZ
+*tBodyGyro-XYZ
+*tBodyGyroJerk-XYZ
+*tBodyAccMag
+*tGravityAccMag
+*tBodyAccJerkMag
+*tBodyGyroMag
+*tBodyGyroJerkMag
+*fBodyAcc-XYZ
+*fBodyAccJerk-XYZ
+*fBodyGyro-XYZ
+*fBodyAccMag
+*fBodyAccJerkMag
+*fBodyGyroMag
+*fBodyGyroJerkMag
+
 Means are denoted by "_mean" in text. Standard deviation is denoted by "_std" in text 
 
 ##Columns headers 3 through 81 are listed below

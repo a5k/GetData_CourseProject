@@ -4,9 +4,9 @@ The goal of this project was to create a tidy data set from the initial dataset 
 The dataset loaded here is tidy because each column represents one variable only and each row represents one observation only. 
 The dataset submitted consistes of 180 rows and 81 columns
 Columns are as follows:
-. Column 1 - SubjectID - the ID of the subject
-. Column 2 - ActivityID - the name of the ActivityID
-. Columns 3 through 81 - AVG (featurename) - columns 3 through 81 of the dataset are the averages of the features extracted from the initial datasets
+* Column 1 - SubjectID - the ID of the subject
+* Column 2 - ActivityID - the name of the ActivityID
+* Columns 3 through 81 - AVG (featurename) - columns 3 through 81 of the dataset are the averages of the features extracted from the initial datasets
 ## Getting data
 For this project the file was downloaded and unzipped manually into a local folder and then read from there. 
 Code comments outline how each portion of the project was executed. Summarized here
